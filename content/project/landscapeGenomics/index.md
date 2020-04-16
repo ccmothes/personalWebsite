@@ -22,8 +22,8 @@ url_video: ""
 
 *Agama picticauda*                 |  *Basiliscus vittatus* 
 :-----------------------------------:|:-----------------------------------:
-<img src="featured.jpg" width="350" height = "450">  |  <img src="Basilisk.jpg" width="300" height="350">
-
+<img src="featured.jpg" width="320" height = "280">  |  <img src="Basilisk.jpg" width="280" height="200">
+<br style="clear:both;" />
 
 South Florida is home to the world's largest community of introduced lizard species, with established populations of 43 different species. This community is a great example of the novel ecosystems concept, serving as a test case for how these novel systems operate, particularly how species disperse throughout a new habitat. As invasions become more common as a result of globalization, research on non-native populations is essential to inform managers on the best practices to prevent or reduce negative impacts on native ecosystems. To understand mechanisms of dispersal of these non-native lizard species, I am conducting a landscape genomics study, using next-gen sequencing to detect the relationship between environmental factors and spatial genetic structure, such as the factors that influence dispersal and persistence of the species.
 

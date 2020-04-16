@@ -41,8 +41,12 @@
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;featured.jpg&#34; width=&#34;350&#34; height = &#34;450&#34;&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;Basilisk.jpg&#34; width=&#34;300&#34; height=&#34;350&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;featured.jpg&#34; width=&#34;320&#34; height = &#34;280&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;Basilisk.jpg&#34; width=&#34;280&#34; height=&#34;200&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;br style=&#34;clear:both;&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
