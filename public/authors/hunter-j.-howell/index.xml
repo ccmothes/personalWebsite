@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hunter J. Howell | Caitlin C. Mothes</title>
+    <link>/authors/hunter-j.-howell/</link>
+      <atom:link href="/authors/hunter-j.-howell/index.xml" rel="self" type="application/rss+xml" />
+    <description>Hunter J. Howell</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Caitlin C. Mothes</copyright><lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Hunter J. Howell</title>
+      <link>/authors/hunter-j.-howell/</link>
+    </image>
+    
+    <item>
+      <title>Amphibian responses to livestock use of wetlands: new empirical data and a global review</title>
+      <link>/amphibian/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/amphibian/</guid>
+      <description>&lt;hr&gt;
+&lt;h2 id=&#34;abstract&#34;&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Pastureland currently occupies 26% of Earth’s ice-free land surface. As the global
+human population continues to increase and developing countries consume more proteinrich
+diets, the amount of land devoted to livestock grazing will only continue to rise. To
+mitigate the loss of global biodiversity as a consequence of the ever-expanding amount of land
+converted from native habitat into pastureland for livestock grazing, an understanding of how
+livestock impact wildlife is critical. While previous reviews have examined the impact of livestock
+on a wide variety of taxa, there have been no reviews examining how global livestock
+grazing affects amphibians. We conducted both an empirical study in south-central Florida
+examining the impact of cattle on amphibian communities and a quantitative literature review
+of similar studies on five continents. Our empirical study analyzed amphibian community
+responses to cattle as both a binary (presence/absence) variable, and as a continuous variable
+based on cow pie density. Across all analyses, we were unable to find any evidence that cattle
+affected the amphibian community at our study site. The literature review returned 46 papers
+that met our criteria for inclusion. Of these studies, 15 found positive effects of livestock on
+amphibians, 21 found neutral/mixed effects, and 10 found negative effects. Our quantitative
+analysis of these data indicates that amphibian species that historically occurred in closedcanopy
+habitats are generally negatively affected by livestock presence. In contrast, opencanopy
+amphibians are likely to experience positive effects from the presence of livestock, and
+these positive effects are most likely to occur in locations with cooler climates and/or greater
+precipitation seasonality. Collectively, our empirical work and literature review demonstrate
+that under the correct conditions well-managed rangelands are able to support diverse assemblages
+of amphibians. These rangeland ecosystems may play a critical role in protecting future
+amphibian biodiversity by serving as an “off-reserve” system to supplement the biodiversity
+conserved within traditional protected areas.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fig-3.jpg&#34; alt=&#34;Figure 3&#34;&gt;
+&lt;em&gt;FIG. 3. Locations of the reviewed studies examining the impacts of livestock grazing on amphibian abundance and richness. Of the 47 studies, 28 were conducted in the United States and 7 were conducted in Europe.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fig-4.jpg&#34; alt=&#34;Figure 4&#34;&gt;
+&lt;em&gt;FIG. 4. Strip plot displaying amphibian species’ response to livestock. Amphibians that prefer closed-canopy habitat are more negatively affected by livestock than are amphibians that prefer open-canopy or mixed habitats types. Each white, red, or blue circle represents an amphibian species; black circles are means for each habitat type.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Use of standardized methods to improve extinction risk classification</title>
+      <link>/standardized_methods/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>/standardized_methods/</guid>
+      <description>&lt;hr&gt;
+&lt;h2 id=&#34;abstract&#34;&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Standardized classification methods based on quantifiable risk metrics are critical for evaluating extinction threats because they increase objectivity, consistency, and transparency of listing decisions. Yet, in the United States, neither federal nor state agencies use standardized methods for listing species for legal protection, which could put listing decisions at odds with the magnitude of the risk. We used a recently developed set of quantitative risk metrics for California herpetofauna as a case study to highlight discrepancies in listing decisions made without standardized methods. We also combined such quantitative metrics with classification tree analysis to attempt to increase the transparency of previous listing decisions by identifying the criteria that had inherently been given the most weight. Federally listed herpetofauna in California scored significantly higher on the risk‐metric spectrum than those not federally listed, whereas state‐listed species did not score any higher than species that were not state listed. Based on classification trees, state endemism was the most important predictor of listing status at the state level and distribution trend (decline in a species’ range size) and population trend (decline in a species’ abundance at localized sites) were the most important predictors at the federal level. Our results emphasize the need for governing bodies to adopt standardized methods for assessing conservation risk that are based on quantitative criteria. Such methods allow decision makers to identify criteria inherently given the most weight in determining listing status, thus increasing the transparency of previous listing decisions, and produce an unbiased comparison of conservation threat across all species to promote consistency, efficiency, and effectiveness of the listing process.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fig-1-bg.jpg&#34; alt=&#34;Figure 1&#34;&gt;
+&lt;em&gt;Figure 1. (a) Risk scores for California reptile and amphibian state-listed species and species of special concern priority 1, 2, and 3. (different letters denote significant differences between individual categories; overall stateand nonstate-listed species did not differ significantly [p = 0.34]) and (b) individual risk scores for all species assessed (∗, federally listed species, which scored significantly higher than nonfederally listed species [p &amp;lt; 0.001]).&lt;/em&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fig-2.jpg&#34; alt=&#34;Figure 2&#34;&gt;
+&lt;em&gt;Figure 2. Classification trees describing listed versus unlisted reptile and amphibian species at the (a) state (California) and (b) federal level (misclassification rates [MC] in parentheses for each terminal node; numbers on branches, species’ risk scores for risk metric indicated) and (c) relative importance of each risk metric inherent in the state and federal listing process.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
