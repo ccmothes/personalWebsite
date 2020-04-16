@@ -70,14 +70,15 @@ html_fix <- htmltools::tags$style(type = "text/css", css_fix)  # Convert CSS to 
 ## Summary: 
 Legal protection of imperiled species is essential to combat growing rates of global extinctions. In the United States, the federal government employs the Endangered Species Act (ESA) to protect threatened and endangered species. While the ESA is arguably one of the strongest environmental laws ever enacted, there are current political initiatives to weaken the ESA and even dismantle it entirely to transfer all authority to the states. To assess the legal capacity of current state laws to protect species, we analyzed the coverage of imperiled species by each state. We compiled data on all state listed species, IUCN Red List species, and ESA listed species in each state. We found that 68% of IUCN imperiled species and 30% of ESA listed species are not protected throughout their entire U.S. range by state laws. Additionally, 94% of states protect less than half of the IUCN imperiled species that occur in their state, and one third of states protect less than half of the ESA listed species in their state. Although there are large discrepancies between state legislative provisions, our results suggest that phasing out the ESA would be detrimental to imperiled species conservation and recovery in the U.S. 
 
-**Below is a preview of our findings (manuscript currently under review, stay tuned!)**
+### **Below is a preview of our findings (manuscript currently under review, stay tuned!)**
 
 <br>
 
 ***  
 
 ### State Listed Species
-The total number of species protected in each U.S. state by each state imperiled species act:
+The total number of species protected in each U.S. state by each state imperiled species act: <br> 
+(*Hover over or click on each state to see the total value*) 
 ```{r echo = FALSE, warning=FALSE, message=FALSE}
 
 sf_fifty <- sf::st_as_sf(fifty_states, coords = c("long", "lat")) %>% 
