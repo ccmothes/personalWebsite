@@ -54,9 +54,9 @@ The use of ecological niche models to predict how future climate change may impa
 Dark colors indicate low suitability and bright colors indicate high suitability on a continuous scale of 0 - 1
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE}
-currSuit <- raster('data/analyses/current900.tif')
+currSuit <- raster('data/analyses/current3km.tif')
 
-futureSuit <- raster('data/analyses/future900.tif')
+futureSuit <- raster('data/analyses/future3km.tif')
 
 x <- 0:1
 
@@ -94,7 +94,7 @@ leafsync::sync(curr, future, ncol = 2)
 Visualize how habitat suitablity changes from current to future climatic conditions. Throughout the entire range we find decreasing suitability values (red and orange colors), with hardly any areas increasing in suitability (noted by the lack of green colors)
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
-changeSuit <- raster('data/analyses/change900.tif')
+changeSuit <- raster('data/analyses/change3km.tif')
 
 x2 <- -1:1
 
