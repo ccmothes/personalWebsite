@@ -18,10 +18,11 @@ education:
     year: 2012-2016
 email: "ccmothes@miami.edu"
 interests:
-- Conservation and Sustainability
-- Imperiled Species Policy
+- Conservation
 - Spatial Ecology
-- Geospatial Data Science
+- Imperiled Species Policy
+- Connectivity Planning
+- Data Science
 
 name: Caitlin C. Mothes
 organizations:
