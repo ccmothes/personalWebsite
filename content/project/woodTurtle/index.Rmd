@@ -1,17 +1,21 @@
 ---
 title: Habitat Suitability Models for the Imperiled Wood Turtle
+
 summary: Using Ecological Niche Models to help guide Wood Turtle managment under future climate change
-author: "Caitlin Mothes"
-date: "2020-04-14"
+author: "Caitlin C. Mothes, Hunter J. Howell, Christopher A. Searcy"
+date: "2020-09-14"
 tags:
   - Species Distribution Models
 slug: wood_turtle
+doi: "https://doi.org/10.1016/j.gecco.2020.e01247"
+url_pdf: "files/Mothes_etal_2020_GECCO.pdf"
+details: blah
+keywords: "blah blah"
 thumbnail: 'woodTurtle/featured.jpg'
 image:
   preview_only: TRUE
 output: 
-  html_document:
-    theme: flatly
+  html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -22,7 +26,7 @@ library(leaflet)
 library(leafsync)
 library(viridis)
 ```
-
+**This study was recently published in *Global Ecology and Conservation*, which you can read [here](Mothes_etal_2020_GECCO.pdf). Below see a preview of our findings and interactive habitat suitability maps**
 <!-- <div class = "row"> -->
 
 <!-- <div class = "col-md-4"> -->
@@ -40,11 +44,10 @@ library(viridis)
 
 ![wood turtle](woodturtle1.jpg){width=100%}\
 
+## Abstract:
+The use of ecological niche models to predict how future climate change may impact habitat suitability is a critical component of imperiled species management. These models allow for the identification of areas with high future suitability that will support the persistence of the species. We developed an ecological niche model and performed protected areas analysis to assess the current and future distribution of suitable habitat for the globally endangered wood turtle (*Glyptemys insculpta*) across the northeastern U.S. portion of its range. **Our model predicts that by 2070 the suitable habitat for this species will decrease by 29-52%, and the total area of optimal habitat will decrease by 62-86%**. Furthermore, **currently only 5% of suitable habitat and 8% of optimal habitat is protected**, with the total area of protected suitable and optimal habitat expected to decrease by 16-28% and 31-64%, respectively, by 2070. Our results suggest that long-term wood turtle conservation efforts should be directed towards protecting habitat in higher latitudes of their range, mainly in the states of Maine, Vermont, New Hampshire, and New York where the majority of climate refugia exist. Additionally, management action will be required to facilitate the northward transition of southern populations which are threatened with extinction due to rising temperatures. Along with having important conservation implications for the imperiled wood turtle, our study also serves as an example of how climate change assessments should be used to direct long-term conservation efforts of other imperiled species across the globe.
 
-## Summary:
-The use of ecological niche models to predict how future climate change may impact habitat suitability is a critical component of imperiled species management. These models allow for the identification of areas with high future suitability that will support the persistence of the species. We developed an ecological niche model and performed protected areas analysis to assess the current and future distribution of suitable habitat for the globally endangered wood turtle (*Glyptemys insculpta*) across the northeastern U.S. portion of its range. **Our model predicts that by 2070 the suitable habitat for this species will decrease by 52%, and the total area of optimal habitat will decrease by 86%**. Furthermore, **currently only 5% of suitable habitat and 8% of optimal habitat is protected**, with the total area of protected suitable and optimal habitat expected to decrease by 28% and 64%, respectively, by 2070. Our results suggest that long-term wood turtle conservation efforts should be directed towards protecting habitat in higher latitudes of their range, mainly in the states of Maine, Vermont, New Hampshire, and New York where the majority of climate refugia exist. Additionally, management action will be required to facilitate the northward transition of southern populations which are threatened with extinction due to rising temperatures. Along with having important conservation implications for the imperiled wood turtle, our study also serves as an example of how climate change assessments should be used to direct long-term conservation efforts of other imperiled species across the globe.
 
-### **Below is a preview of our findings (manuscript currently under review, stay tuned!)**
 
 *** 
 
@@ -52,7 +55,7 @@ The use of ecological niche models to predict how future climate change may impa
 
 ### Current Habitat Suitability 
 (values range from **0 = Low Suitability** to **1 = High Suitability**)
-```{r out.width = "80%", echo = FALSE, message = FALSE}
+```{r out.width = "80%", echo = FALSE, warning = FALSE, message=FALSE}
 currSuit <- raster('data/analyses/current900.tif')
 
 x <- 0:1
@@ -81,7 +84,7 @@ leaflet() %>% addTiles() %>%
 <br>
 
 ### Future (2070) Habitat Suitability
-```{r out.width="80%", echo=FALSE, message=FALSE}
+```{r out.width="80%", echo=FALSE, message=FALSE, warning=FALSE}
 futureSuit <- raster('data/analyses/future900.tif')
 
 x <- 0:1

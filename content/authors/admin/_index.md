@@ -20,8 +20,8 @@ email: "ccmothes@miami.edu"
 interests:
 - Conservation
 - Spatial Ecology
-- Imperiled Species Policy
 - Connectivity Planning
+- Imperiled Species Policy
 - Data Science
 
 name: Caitlin C. Mothes
@@ -51,5 +51,5 @@ user_groups:
 - Visitors
 ---
 
-I am a PhD Candidate at the University of Miami in the [Department of Biology](https://biology.as.miami.edu/) working in the [Christopher Searcy Lab](https://casearcy.wordpress.com/). My research investigates how environmental factors influence the spatial structure of species, integrating [ecological niche modeling](publication/lizard_niche/) and [genetic techniques](/landscape_genomics/) to study pressing issues for biodiversity in the Anthropocene. I also lead multiple projects related to [imperiled species policy](/state_listed_species/), one of which was recently published in [Conservation Biology](publication/standardized_methods/). I have worked towards developing a broad skill set in geospatial analysis and data science which I use to analyze ecological data and make important insights for biodiversity conservation. [My work](files/cv.pdf) spans a broad range of species and systems, with the overarching goal of applying my research to conservation management decisions and policy action to best protect species and preserve natural ecosystems.
+I am a PhD Candidate at the University of Miami in the [Department of Biology](https://biology.as.miami.edu/) working in the [Christopher Searcy Lab](https://casearcy.wordpress.com/). My research investigates how environmental factors influence the spatial structure of species, integrating [ecological niche modeling](publication/lizard_niche/) and [genetic techniques](/landscape_genomics/) to study pressing issues for biodiversity and develop new tools for [habitat connectivity planning](/connectivity). I also lead multiple projects related to imperiled species policy, recently published in [Conservation Biology](publication/standardized_methods/) and [Conservation Letters](/state_listed_species). I have worked towards developing a broad skill set in geospatial analysis and data science which I use to analyze ecological data and develop tools to make important insights and contributions to biodiversity conservation. [My work](files/cv.pdf) spans a broad range of species and systems, with the overarching goal of applying my research to conservation management decisions and policy action to best protect species and preserve natural ecosystems.
 
