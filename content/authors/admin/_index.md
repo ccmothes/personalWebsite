@@ -24,11 +24,11 @@ interests:
 - Imperiled Species Policy
 - Data Science
 
-name: Caitlin C. Mothes
+name: Caitlin C. Mothes, Ph.D.
 organizations:
 - name: University of Miami
   url: ""
-role: Ph.D. Candidate
+role:
 social:
 - icon: twitter
   icon_pack: fab
@@ -51,5 +51,5 @@ user_groups:
 - Visitors
 ---
 
-I am a PhD Candidate at the University of Miami in the [Department of Biology](https://biology.as.miami.edu/) working in the [Christopher Searcy Lab](https://casearcy.wordpress.com/). My research investigates how environmental factors influence the spatial structure of species, integrating [ecological niche modeling](publication/lizard_niche/) and [genetic techniques](/landscape_genomics/) to study pressing issues for biodiversity and develop new tools for [habitat connectivity planning](/connectivity). I also lead multiple projects related to imperiled species policy, recently published in [Conservation Biology](publication/standardized_methods/) and [Conservation Letters](/state_listed_species). I have worked towards developing a broad skill set in geospatial analysis and data science which I use to analyze ecological data and develop tools to make important insights and contributions to biodiversity conservation. [My work](files/cv.pdf) spans a broad range of species and systems, with the overarching goal of applying my research to conservation management decisions and policy action to best protect species and preserve natural ecosystems.
+I recently received my Ph.D. from the University of Miami in the [Department of Biology](https://biology.as.miami.edu/) working in the [Christopher Searcy Lab](https://casearcy.wordpress.com/). My research investigates how environmental factors influence the spatial structure of species, with a diverse body of work that includes projects applying [species distribution models](publication/lizard_niche/) and [landscape genomics](/landscape_genomics/) to pressing biodiversity conservation issues and developing new tools for [landscape conservation design](/connectivity). I also lead multiple projects related to imperiled species policy, recently published in [Conservation Biology](publication/standardized_methods/) and [Conservation Letters](/state_listed_species). I have worked towards developing a broad skill set in geospatial analysis and data science which I use to analyze ecological data and develop tools to make important insights and contributions to biodiversity conservation. [My work](files/cv.pdf) spans a broad range of species and systems, with the overarching goal of applying my research to conservation management decisions and policy action to best protect species and preserve natural ecosystems.
 
