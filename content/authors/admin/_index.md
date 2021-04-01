@@ -4,9 +4,9 @@ authors:
 bio:
 education:
   courses:
-  - course: Ph.D. in Biology
+  - course: Ph.D. in Conservation Ecology
     institution: University of Miami
-    year: 2016 - Current
+    year: 2016 - 2021
   - course: Certificate in Geospatial Technology
     institution: University of Miami
     year: 2018
