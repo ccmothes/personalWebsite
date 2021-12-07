@@ -22,9 +22,12 @@ output:
 
 library(tidyverse)
 library(raster)
+library(rgdal)
 library(leaflet)
 library(leafsync)
 library(viridis)
+
+
 ```
 **This study was recently published in *Global Ecology and Conservation*, which you can read [here](Mothes_etal_2020_GECCO.pdf). Below see a preview of our findings and interactive habitat suitability maps**
 <!-- <div class = "row"> -->
@@ -58,17 +61,19 @@ The use of ecological niche models to predict how future climate change may impa
 ```{r out.width = "80%", echo = FALSE, warning = FALSE, message=FALSE}
 currSuit <- raster('data/analyses/current900.tif')
 
+
 x <- 0:1
 
 pal <- leaflet::colorNumeric(palette = "inferno",
                              x,
                              na.color = "transparent")
 
+
 currProj <- leaflet::projectRasterForLeaflet(currSuit, method = "bilinear")
 
 
 leaflet() %>% addTiles() %>%
-  addRasterImage(currProj, colors = pal, maxBytes = Inf, project = FALSE) %>%
+  addRasterImage(currProj, colors = pal, maxBytes = Inf, project = FALSE, group = "Habitat Suitability") %>%
   addLegend(
     position = 'bottomright',
     pal = pal,
