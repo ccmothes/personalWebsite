@@ -1,7 +1,7 @@
 ---
 abstract:
 authors:
-- admin
+- Caitlin C. Mothes
 - Stephanie L. Clements
 - Dishane K. Hewavithana
 - Hunter J. Howell
@@ -32,7 +32,7 @@ summary: In *Conservation Biology*
 title: Use of standardized methods to improve extinction risk classification
 url_code: ''
 url_dataset: ''
-url_pdf: "files/Mothes_et_al-2019-Conservation_Biology.pdf"
+url_pdf: "files/Mothes_et_al-2020-Conservation_Biology.pdf"
 url_poster: ''
 url_project: 
 url_slides: ""
