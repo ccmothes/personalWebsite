@@ -81,16 +81,16 @@ privacy_pack = false
 ############################
 
 # Enter contact details (optional). To hide a field, clear it to "".
-email = "ccmothes@miami.edu"
+email = "ccmothes@colostate.edu"
 phone = ""
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
-address = {street = "1301 Memorial Drive", city = "Coral Gables", region = "FL", postcode = "33146", country = "United States", country_code = "US"}
+address = {street = "211G Morgan Library", city = "Fort Collins", region = "CO", postcode = "80523", country = "United States", country_code = "US"}
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
-coordinates = {latitude = "25.722132", longitude = "-80.279592"}
+coordinates = {latitude = "40.573451440796", longitude = "-105.08452732408686"}
 
 # Directions for visitors to locate you.
 directions = ""

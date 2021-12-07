@@ -22,10 +22,11 @@ output:
 
 library(tidyverse)
 library(raster)
-library(rgdal)
+#library(rgdal)
 library(leaflet)
-library(leafsync)
+#library(leafsync)
 library(viridis)
+library(sf)
 
 
 ```
@@ -58,8 +59,13 @@ The use of ecological niche models to predict how future climate change may impa
 
 ### Current Habitat Suitability 
 (values range from **0 = Low Suitability** to **1 = High Suitability**)
+
+*Protected areas were downloaded from the [World Database on Protected Areas (WDPA)](https://www.protectedplanet.net/en/thematic-areas/wdpa?tab=WDPA). You can click on a protected area on the map to view its metadata*
 ```{r out.width = "80%", echo = FALSE, warning = FALSE, message=FALSE}
 currSuit <- raster('data/analyses/current900.tif')
+
+pa <- readRDS("data/analyses/protectedAreas.RDS")
+pa$AREA_KM <- round(pa$AREA_KM, digits = 2)
 
 
 x <- 0:1
@@ -73,17 +79,26 @@ currProj <- leaflet::projectRasterForLeaflet(currSuit, method = "bilinear")
 
 
 leaflet() %>% addTiles() %>%
-  addRasterImage(currProj, colors = pal, maxBytes = Inf, project = FALSE, group = "Habitat Suitability") %>%
+  addRasterImage(currProj, colors = pal, opacity = 0.85, maxBytes = Inf, project = FALSE, group = "Habitat Suitability") %>%
+  addPolygons(data = pa, color = "blue", group = "Protected Areas",
+              popup = paste("Name:", pa$NAME, "<br>",
+                            "Designation:", pa$DESIG, "<br>",
+                            "Ownership Type:", pa$OWN_TYP, "<br>",
+                            "Managment Authority:", pa$MANG_AU, "<br>",
+                            "Area:", pa$AREA_KM, "km<sup>2</sup>")) %>% 
   addLegend(
     position = 'bottomright',
     pal = pal,
     values = x,
     bins = c(0, 0.2, 0.4, 0.6, 0.8, 1),
     title = 'Current Habitat Suitability'
-  )
+  ) %>% 
+  addLayersControl(overlayGroups = c("Habitat Suitability", "Protected Areas"),
+                  options = layersControlOptions(collapsed = FALSE)) %>% 
+  hideGroup("Protected Areas")
 
 ```
-
+*Note: Click on a protected area to view its metadata*
 
 
 <br>
@@ -102,14 +117,23 @@ futProj <- leaflet::projectRasterForLeaflet(futureSuit, method = "bilinear")
 
 
 leaflet() %>% addTiles() %>%
-  addRasterImage(futProj, colors = pal, maxBytes = Inf, project = FALSE) %>%
+  addRasterImage(futProj, colors = pal, opacity = 0.85, maxBytes = Inf, project = FALSE, group = "Habitat Suitability") %>%
+  addPolygons(data = pa, color = "blue", group = "Protected Areas",
+              popup = paste("Name:", pa$NAME, "<br>",
+                            "Designation:", pa$DESIG, "<br>",
+                            "Ownership Type:", pa$OWN_TYP, "<br>",
+                            "Managment Authority:", pa$MANG_AU, "<br>",
+                            "Area:", pa$AREA_KM, "km<sup>2</sup>")) %>% 
   addLegend(
     position = 'bottomright',
     pal = pal,
     values = x,
     bins = c(0, 0.2, 0.4, 0.6, 0.8, 1),
     title = 'Future Habitat Suitability'
-  )
+  )%>% 
+  addLayersControl(overlayGroups = c("Habitat Suitability", "Protected Areas"),
+                  options = layersControlOptions(collapsed = FALSE)) %>% 
+  hideGroup("Protected Areas")
 
 
 
@@ -132,19 +156,28 @@ changeProj <- leaflet::projectRasterForLeaflet(changeSuit, method = "bilinear")
 
 
 leaflet() %>% addTiles() %>% 
-  addRasterImage(changeProj, colors = pal2, maxBytes = Inf) %>%
+  addRasterImage(changeProj, colors = pal2, opacity = 0.85, maxBytes = Inf, group = "Change in Suitability") %>%
+  addPolygons(data = pa, color = "blue", group = "Protected Areas",
+              popup = paste("Name:", pa$NAME, "<br>",
+                            "Designation:", pa$DESIG, "<br>",
+                            "Ownership Type:", pa$OWN_TYP, "<br>",
+                            "Managment Authority:", pa$MANG_AU, "<br>",
+                            "Area:", pa$AREA_KM, "km<sup>2</sup>")) %>% 
   addLegend(
     position = 'bottomright',
     pal = pal2,
     values = x2,
     title = 'Change in Suitability'
-  )
+  )%>% 
+  addLayersControl(overlayGroups = c("Habitat Suitability", "Protected Areas"),
+                  options = layersControlOptions(collapsed = FALSE)) %>% 
+  hideGroup("Protected Areas")
   
 
 ```
   
 <br><br>
-**This project is part of a collaboration with the Susquehannock Wildlife Society in Maryland where we are working on a 'trifecta' validation study, combining visual encounter surveys, eDNA sampling, and the predicted presence probability from this project to evaluate the accuracy of these various sampling methods.**
+**This project is part of a collaboration with the [Susquehannock Wildlife Society](https://www.susquehannockwildlife.org/) in Maryland where we are working on a 'trifecta' validation study, combining visual encounter surveys, eDNA sampling, and the predicted presence probability from this project to evaluate the accuracy of these various sampling methods.**
 
 
 
