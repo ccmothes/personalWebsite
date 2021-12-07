@@ -26,7 +26,7 @@ interests:
 
 name: Caitlin C. Mothes, Ph.D.
 organizations:
-- name: University of Miami
+- name:
   url: ""
 role:
 social:
