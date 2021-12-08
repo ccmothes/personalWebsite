@@ -1,7 +1,7 @@
 ---
-title: "Developing an open-source toolset to improve landscape connectivity planning"
+title: "Habicon: an open-source toolset to improve landscape connectivity planning"
 author: "Caitlin"
-date: "2020-07-10T00:00:00Z"
+date: "2021-12-08T00:00:00Z"
 tags:
   - Landscape Connectivity
   - Species Distribution Models
@@ -22,44 +22,49 @@ library(viridis)
 
 ![](landscape.jpg)
 
-Landscape connectivity is a vital component of biodiversity conservation as it facilitates the movement of individuals and genes between habitat patches to help maintain populations and metapopulations and increase persistence of species faced with global change. With the current rate of global change and lack of resources for conservation, prioritization of which habitats and corridors should be conserved to promote maximum landscape connectivity for species persistence is necessary to most efficiently enact effective management plans.
+The goal of `habicon` is to calculate habitat patch and corridor priority in terms of their degree of importance to ecological connectivity. It is designed to integrate habitat suitability data (e.g., outputs of species distribution models) and connectivity/corridor data (e.g., outputs from connectivity models such as Circuitscape) 
 
-Species Distribution Models (SDMs) are used to map areas across a landscape that are suitable for species presence, and landscape resistance models identify connectivity by mapping paths that support movement and gene flow between habitat patches. Many studies have found that SDMs are not very useful in predicting the matrix permeability and subsequent functional connectivity among patches. On the other hand, landscape resistance models do not provide any information on the habitat quality and species abundance at each patch, while numerous studies have found that high suitability predicted by SDMs corresponds well with high abundance. Therefore, SDMs and landscape resistance models complement each other well in these respects and should be used synergistically for corridor planning. To facilitate the use of both models, my goal is to develop an open-source toolset in the form of an R package that integrates SDM and landscape resistance model outputs to calculate corridor importance in terms of the level of movement it supports combined with the size and quality of habitats it connects (Figure 1). 
-
-![Conceptual Figure](conceptFig.jpg) *Figure 1. Conceptual design where A) represents a landscape resistance map in which thicker lines represent higher levels of movement, B) represents an SDM output showing patches of suitable habitat, and C) is the result of combining A) and B), where darker colors represent more importance to landscape connectivity in terms of the amount of movement the corridor supports and the quality of habitat it connects.*
+![Conceptual Figure](conceptFig.jpg) *Conceptual design where A) represents a habitat suitability map which models species presence and identifies resource patches, B) represents a connectivity map modeling movement between these patches, and C) is the result of combining A) and B), quantifying patch and corridor priority to maximize ecological connectivity.*
 
 <br>
 
+`habicon` includes a few prep functions in addition to two main quantitative functions: `patch_priority` and `corr_priority`. `patch_priority` ranks individual patches based on multiple connectivity metrics, including quality-weighted area, weighted betweenness centrality, and dEC (a measure of patch importance to equivalent connectivity proposed by Saura et al. 2011). `corr_priorty` uses these patch locations and their priority metrics, along with corridor characteristics such as distance and resistance to movement, to create a continuous surface of corridor priority. 
+
 ## **Simulated Example**
 
-Below is a preliminary example of the corridor prioritization map that is created by the R package (using simulated data). The values for Corridor Priority are calculated on a pixel-by-pixel basis and take into account the number and quality of habitat patches the corridor connects (i.e., area and suitability of each patch), the cost distance from that corridor pixel to each habitat patch, the quality of the corridor (i.e., resistance value) and the size of the corridor (width). (*Stay tuned, this project is still in the early stages of development*)
+Below is a preliminary example of the prioritization maps that are created by `habicon` using simulated suitability and connectivity data. 
 
 ```{r demo, echo=FALSE, warning=FALSE, message=FALSE}
 
-prmap <- raster('priority_sim.tif')
-patch <- raster('suit_bin.tif')
-corr <- raster('corr_bin.tif')
+patch <- readRDS('patch_prior.RDS')
+corr <- readRDS('corr_prior.RDS')
 
-#change 0 pixels to na
-prmap[prmap == 0] <- NA
+# #change 0 pixels to na
+# prmap[prmap == 0] <- NA
 
-
-pal <- colorNumeric("inferno", values(prmap), na.color = 'transparent')
-#pal2 <- color ('Greys', bins = 2, domain = 0:1, na.color = 'transparent')
 
 leaflet() %>%
-  addRasterImage(prmap, colors = pal, group = 'Corridor Priority', project = TRUE) %>%
-  addRasterImage(patch, colors = '#34eb34', group = 'Habitat Patch', opacity = 0.7, project = TRUE) %>%
-  addRasterImage(corr, colors = '#0f420f', group = 'Habitat Corridor', opacity = 0.7, project = TRUE) %>% 
-  addLegend(position = 'bottomright', pal = pal, values = values(prmap), group = 'priority', title = 'Corridor Priority') %>% 
-  addLayersControl(overlayGroups = c('Habitat Corridor', 'Habitat Patch', 'Corridor Priority'), options = layersControlOptions(collapsed = FALSE))
-# slight projection issue, can't figure out how to fix it
+  addRasterImage(corr, colors = rev(heat.colors(n = 100)), group = "Corridor Priority"
+                 ) %>%
+  addRasterImage(patch$qwa, colors = "Blues",  group = "Quality-Weighted Area") %>% 
+  addRasterImage(patch$btwn, colors = "Blues", group = "Betweenness Centrality") %>% 
+  addRasterImage(patch$dECA, colors = 'Blues', group = "dEC") %>% 
+  addLayersControl(overlayGroups = c("Corridor Priority", "Quality-Weighted Area",
+                                     "Betweenness Centrality", "dEC"),
+                   options = layersControlOptions(collapsed = FALSE)) %>% 
+  hideGroup(c("Betweenness Centrality", "dEC"))
 
 
 ```
 
-## **Advantages of this new tool set**
+### Head to the `habicon` [github page](https://github.com/ccmothes/habicon) for more details and a walk through of all the functions currently available
 
-While numerous studies have used both methods in a conservation context, currently there is no easy way to integrate the two methods, particularly for corridor prioritization. While there are several other software programs that can perform habitat connectivity analyses, some of these programs are not freely available and there is no tool that performs all these calculations in a single platform. The advantage of collating all these steps into a single R package is that the software is free, the entire process from pre-processing of input files to final map presentation is easily reproducible, and the process can be automated over numerous species, places, or time frames, which is not offered by the other software programs. The R programming language is one of the fastest growing coding languages, particularly for ecologists. As a publicly available and easy to execute package, this new toolset will expand the applicability of SDMs and landscape resistance models in addressing conservation issues and improve habitat patch and corridor prioritization, which is a vital step to effectively preserving biodiversity.
+(*And stay tuned, this project is still in the early stages of development*)
+
+
+
+### **Why use `habicon`?**
+
+While numerous studies have used both suitability and connectivity models in a conservation context, currently there is no easy way to integrate the two methods, particularly for landscape prioritization. While there are several other software programs that can perform habitat connectivity and prioritization analyses, some of these programs are not freely available and there is no tool that performs all these calculations in a single platform. The advantage of collating all these steps into a single R package is that the software is free, the entire process from pre-processing of input files to final map presentation is easily reproducible, and the process can be automated over numerous species, places, or time frames. The R programming language is one of the fastest growing coding languages, particularly for ecologists. As a publicly available and easy to execute package, this new toolset will expand the applicability of habitat suitability and connectivity models in addressing conservation issues and improve habitat patch and corridor prioritization, which is a vital step to effectively preserving biodiversity.
 
 

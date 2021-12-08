@@ -25,8 +25,7 @@ slides:
 summary: In *Global Ecology and Conservation* 
 tags:
 
-title: Habitat suitability models for the imperiled wood turtle (Glyptemys insculpta) raise concerns for the species’ persistence under future climate change
-url_code: "https://github.com/ccmothes/woodturtle_gecco"
+title: Habitat suitability models for the imperiled wood turtle raise concerns for the species’ persistence under future climate change
 url_dataset: ""
 url_pdf: "files/Mothes_etal_2020_GECCO.pdf"
 url_poster: ""
